@@ -1,0 +1,14 @@
+{% if all_albums %}
+    <h1>This is a change</h1>
+    <br>
+    <ul>
+        {% for album in all_albums %}
+        <li>
+            <a href="/music/{{ album.id }}">{{ album.album_title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+{% else %}
+    <h3>There is no albums</h3>
+{% endif %}
